@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Julie's Treats - Snack Bar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+  
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+         <span style="width: 100%; display: flex; justify-content: space-between; align-items: center;" >
+            <a href="home.html" class="navbar-brand ms-4 ms-lg-0">
+                <img alt="logo" src="img/logo.png" m-0 width= "30%" height="30%"  />
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </span>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="home.html" class="nav-item nav-link">Home</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="menu.html" class="nav-item nav-link active">Menu</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class=" d-none d-lg-flex">
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fa fa-phone text-primary"></i>
+                </div>
+             
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center pt-5 pb-3">
+            <h1 class="display-4 text-white animated slideInDown mb-3">Our Menu</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Product Start --> 
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">// Our Menu</p>
+                <h1 class="display-6 mb-4">Explore Our Varities of Deliciousness</h1>
+            </div>
+            <div class=" prod-gallery product-item-group" >
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                        <span id="price1">170</span>TL 
+                        </div>
+                        <h6 class="mb-3" id="name1">Sharwama</h6>
+                        <span id="subText1">Beef </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/beef-shawarma.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name1', SubTextId='subText1', SnackPriceId='price1', SnackImg='img/beef-shawarma.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle" >
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" 
+                        >
+                    
+                        <span id="price2">150</span> TL 
+                        </div>
+                        <h6 class="mb-3" id="name2">Sharwama</h6>
+                        <span id="subText2">Chicken</span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/chicken-shawarma2.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name2', SubTextId='subText2', SnackPriceId='price2', SnackImg='img/chicken-shawarma2.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div
+                        class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3"
+                        >
+                    
+                       <span id="price3"> 180</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name3">Sharwama</h6>
+                        <span id="subText3">Mixed</span>
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/shawarma-mixed.jpeg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name3', SubTextId='subText3', SnackPriceId='price3', SnackImg='img/shawarma-mixed.jpeg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                       <span id="price4"> 10</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name4">Puff Puff</h6>
+                        <span id="subText4">small size </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/puff-puff-mid.jpeg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name4', SubTextId='subText4', SnackPriceId='price4', SnackImg='img/puff-puff-mid.jpeg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" prod-gallery product-item-group" >
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                        <span id="price5">20</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name5">Puff Puff</h6>
+                        <span id="subText5">Big size </span>
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/puff-puff-lg.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name5', SubTextId='subText5', SnackPriceId='price5', SnackImg='img/puff-puff-lg.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3"
+                        ><span id="price6">50</span>TL </div>
+                        <h6 class="mb-3" id="name6">Eggroll</h6>
+                        <span id="subText6">Golden</span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/eggroll.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name6', SubTextId='subText6', SnackPriceId='price6', SnackImg='img/eggroll.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                        <span id="price7">50</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name7">Chin Chin</h6>
+                        <span id="subText7">small size </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/chin-chin-sm.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name7', SubTextId='subText7', SnackPriceId='price7', SnackImg='img/chin-chin-sm.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                             <span id="price8">80</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name8">Chin Chin</h6>
+                        <span id="subText8">medium size </span>
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/chin-chin-mid.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name8', SubTextId='subText8', SnackPriceId='price8', SnackImg='img/chin-chin-mid.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" prod-gallery product-item-group" >
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                        <span id="price9">120</span>TL 
+                        </div>
+                        <h6 class="mb-3" id="name9">Chin Chin</h6>
+                        <span id="subText9">Large size </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/chin-chin.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name9', SubTextId='subText9', SnackPriceId='price9', SnackImg='img/chin-chin.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                        <span id="price10">20</span>TL 
+                        </div>
+                        <h6 class="mb-3" id="name10">Buns</h6>
+                        <span id="subText10">Golden</span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/buns.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name10', SubTextId='subText10', SnackPriceId='price10', SnackImg='img/buns.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div  class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                        <span id="price11">20</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name11">Samosa</h6>
+                        <span id="subText11">Regular size </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/samosa.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name11', SubTextId='subText11', SnackPriceId='price11', SnackImg='img/samosa.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                    <div class="text-center p-4">
+                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3"
+                        >
+                        <span id="price12">75</span>TL
+                        </div>
+                        <h6 class="mb-3" id="name12">Gizzards</h6>
+                        <span id="subText12">Spiced </span
+                        >
+                    </div>
+                    <div class="position-relative mt-auto rounded-b">
+                        <div class="rounded-b">
+                        <img
+                            class="img-fluid rounded-b"
+                            src="img/gizzard.jpg"
+                            height="50%"
+                            alt=""
+                        />
+                        </div>
+
+                        <div class="product-overlay rounded-b">
+                            <button onclick="GetSnack(SnackNameId='name12', SubTextId='subText12', SnackPriceId='price12', SnackImg='img/gizzard.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                <i class="fa fa-bell text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" prod-gallery product-item-group" >
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                        <div class="text-center p-4">
+                            <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                                <span id="price13">40</span>TL 
+                            </div>
+                            <h6 class="mb-3" id="name13">Chicken Pie</h6>
+                            <span id="subText13">Regular </span
+                            >
+                        </div>
+                        <div class="position-relative mt-auto rounded-b">
+                            <div class="rounded-b">
+                                <img
+                                    class="img-fluid rounded-b"
+                                    src="img/chicken-pie.jpg"
+                                    height="50%"
+                                    alt=""
+                                />
+                            </div>
+
+                            <div class="product-overlay rounded-b">
+                                <button onclick="GetSnack(SnackNameId='name13', SubTextId='subText13', SnackPriceId='price13', SnackImg='img/chicken-pie.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                    <i class="fa fa-bell text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                        <div class="text-center p-4">
+                            <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                                <span id="price14">50</span>TL 
+                            </div>
+                            <h6 class="mb-3" id="name14">Meat pie</h6>
+                            <span id="subText14">Regular</span>
+                        </div>
+                        <div class="position-relative mt-auto rounded-b">
+                            <div class="rounded-b">
+                            <img
+                                class="img-fluid rounded-b"
+                                src="img/meatpie.jpg"
+                                height="50%"
+                                alt=""
+                            />
+                            </div>
+
+                            <div class="product-overlay rounded-b">
+                                <button onclick="GetSnack(SnackNameId='name14', SubTextId='subText14', SnackPriceId='price14', SnackImg='img/meatpie.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                    <i class="fa fa-bell text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                        <div class="text-center p-4">
+                            <div
+                            class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                            <span id="price15">20</span>TL
+                            </div>
+                            <h6 class="mb-3" id="name15">Samosa</h6>
+                            <span id="subtext15">regular size </span
+                            >
+                        </div>
+                        <div class="position-relative mt-auto rounded-b">
+                            <div class="rounded-b">
+                            <img
+                                class="img-fluid rounded-b"
+                                src="img/samosa.jpg"
+                                height="50%"
+                                alt=""
+                            />
+                            </div>
+
+                            <div class="product-overlay rounded-b">
+                                <button onclick="GetSnack(SnackNameId='name15', SubTextId='subText15', SnackPriceId='price15', SnackImg='img/samosa.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                    <i class="fa fa-bell text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
+                        <div class="text-center p-4">
+                            <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
+                                <span id="price16">75</span>TL
+                            </div>
+                            <h6 class="mb-3" id="name16">Gizzards</h6>
+                            <span id="subText16">Spiced </span
+                            >
+                        </div>
+                        <div class="position-relative mt-auto rounded-b">
+                            <div class="rounded-b">
+                                <img
+                                    class="img-fluid rounded-b"
+                                    src="img/gizzard.jpg"
+                                    height="50%"
+                                    alt=""
+                                />
+                            </div>
+
+                            <div class="product-overlay rounded-b">
+                                <button onclick="GetSnack(SnackNameId='name16', SubTextId='subText16', SnackPriceId='price16', SnackImg='img/gizzard.jpg')" class="bellButton btn btn-lg-square btn-outline-light rounded-circle">
+                                    <i class="fa fa-bell text-primary"></i>
+                                </button>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product End -->
+
+
+  <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <img alt="logo" src="img/logo.png" m-0 width="100%" height="100%" />
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Office Address</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Ragip Kenan Sokak OCP1 Apartmani Daire 4 taskinkoy lefkosa
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+90 548 857 00 14
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>julie.s.treat1@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr" target="_blank"><i class="fab fa-instagram-f fa-instagram"></i
+                  ></a>
+              <a
+                class="btn btn-square btn-outline-light rounded-circle me-1"
+                href="https://www.facebook.com/julie.streats.2024" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <!-- <a
+                class="btn btn-square btn-outline-light rounded-circle me-1"
+                href=""
+                ><i class="fab fa-youtube"></i
+              ></a> -->
+             
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="/home.html">Home</a>
+            <a class="btn btn-link" href="/service.html">Services</a>
+            <a class="btn btn-link" href="/about.html">About</a>
+            <a class="btn btn-link" href="/contact.html">Contact</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Food Gallery</h4>
+            <div class="row g-2">
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/meatpie.jpeg"
+                  alt="Image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/puff-puff.jpeg"
+                  alt="Image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/chin-chin.jpeg"
+                  alt="Image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/prod2.jpeg"
+                  alt="Image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/samosa-roll.jpeg"
+                  alt="Image"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light rounded p-1"
+                  src="img/stickmeat2.jpeg"
+                  alt="Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="/home.html">Julie's Treats</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    A World of <a href="/home.html">Deliciousness</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        function GetSnack(SnackNameId, SubTextId, SnackPriceId, snackImg) {
+
+            const snackName = document.getElementById(SnackNameId).innerText;
+            const snackPrice = document.getElementById(SnackPriceId).innerText;
+            const subText= document.getElementById(SubTextId).innerText;
+            const snackObj = {snackName,subText,snackPrice,snackImg}
+        //    const stringSanck=  JSON.stringify(snackObj)
+        // console.log(snackObj)
+            sessionStorage.setItem('snackStringObj', JSON.stringify(snackObj));
+            // localStorage.setItem('snackPrice', snackPrice )
+            // localStorage.setItem('SnackImg', SnackImg)
+             window.location.assign("/order.html");
+            
+        }
+    </script>
+</body>
+
+</html>

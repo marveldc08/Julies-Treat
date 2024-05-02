@@ -43,8 +43,8 @@
 
     // Header carousel
     $(".header-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1500,
+        autoplay: true,
+        smartSpeed: 2000,
         loop: true,
         nav: true,
         dots: false,
@@ -65,7 +65,7 @@
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
-        autoplay: false,
+        autoplay: true,
         smartSpeed: 1000,
         margin: 25,
         loop: true,
@@ -92,15 +92,25 @@
     //toggle switch
     var toggle = document.getElementById("addressToggle");
     var addressContainer = document.getElementById("addressContainer");
+    var deliveryPrice = document.getElementById("deliveryContainer");
 
     toggle.addEventListener("change", function () {
         if (toggle.checked) {
             addressContainer.style.display = "block";
+            deliveryPrice.style.display = "flex"
         } else {
             addressContainer.style.display = "none";
+            deliveryPrice.style.display = "none";
         }
     });
+    
+
+    //get item name and price
     
     
 })(jQuery);
 
+
+
+
+// bellButton.addEventListener("click", GetSnack());

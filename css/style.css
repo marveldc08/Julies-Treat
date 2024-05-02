@@ -4,6 +4,7 @@
     --secondary: #545454;
     --light: #FDF5EB;
     --dark: #1E1916;
+    --minor: #AC208C;
 }
 
 @tailwind base;
@@ -511,9 +512,10 @@ input[type="text"], select, textarea {
     margin-bottom: 30px;
 } */
 
-.form-group {
-    margin-bottom: 20px;
-}
+/* .form-group {
+    margin-bottom: 30px;
+    margin-top: 30px;
+} */
 
 label {
     display: block;
@@ -528,7 +530,9 @@ textarea {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    outline: none;
 }
+button{outline: none;}
 
 .toggle-switch-wrap {
     display: flex;
@@ -632,6 +636,11 @@ option{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 9px;
 }
+.prod-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
 
 .gallery img {
     width: 90%;
@@ -646,4 +655,38 @@ option{
 .carousel-item{
     width: 50% !important;
     height: 50% !important;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftBorder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid white;
+}
+
+@media screen and (min-width: 982px){
+    .prod-gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 482px){
+    .leftBorder{
+        border-top: 2px solid white;
+        border-left: 0px ;
+    }
+    .phoneIcon{
+        display: none;
+    }
 }
