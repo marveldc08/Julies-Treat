@@ -153,7 +153,7 @@
                             </div>
                             
                         </div>
-                        <button type="submit" class="outline-none" id="submitOrder"><i class="fa fa-bell text-light"></i> Place Order</button>
+                        <button type="submit" onclick={} class="outline-none" id="submitOrder"><i class="fa fa-bell text-light"></i> Place Order</button>
                     </div>
                     </div>
             </div>
@@ -359,7 +359,7 @@
     <script type="module">
      import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
       document.addEventListener('DOMContentLoaded', function() {
-  
+        console.log('loaded')
           document.getElementById('submitOrder').addEventListener('click', function makePayment() {
             console.log('working')
             const customerEmail = document.getElementById("email");
