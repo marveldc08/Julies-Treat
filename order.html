@@ -153,7 +153,7 @@
                             </div>
                             
                         </div>
-                        <button class="outline-none" id="submitOrder"><i class="fa fa-bell text-light"></i> Place Order</button>
+                        <button type="submit" class="outline-none" id="submitOrder"><i class="fa fa-bell text-light"></i> Place Order</button>
                     </div>
                     </div>
             </div>
@@ -357,57 +357,59 @@
     </script>
 
     <script type="module">
-      import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
+     import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
+      document.addEventListener('DOMContentLoaded', function() {
+  
+          document.getElementById('submitOrder').addEventListener('click', function makePayment() {
+            console.log('working')
+            const customerEmail = document.getElementById("email");
+            const customerName = document.getElementById("name");
+            const snackPrice = document.getElementById('priceFig')
+            const snackName = document.getElementById('snackname').innerText
+            
+            let email = customerEmail.value;
+            let name = customerName.value;
+            let price = snackPrice.innerText;
+            let snack = snackName;
 
-      document.getElementById('submitOrder').addEventListener('click', function makePayment() {
-        console.log('working')
-        const customerEmail = document.getElementById("email");
-        const customerName = document.getElementById("name");
-        const snackPrice = document.getElementById('priceFig')
-        const snackName = document.getElementById('snackname').innerText
-        
-        let email = customerEmail.value;
-        let name = customerName.value;
-        let price = snackPrice.innerText;
-        let snack = snackName;
+          
 
-       
+            //declare callback function
+            function paymentCallback(response) {
+              if (response.resp === '10' || response.resp === "11"|| response.resp === "00")  {
+                Swal.fire({
+                    title: "Success",
+                    text: "Transaction was successfull",
+                    icon: "success"
+                });
+              }
+                console.log(response);
+            }
+            const date = Date.now()
+            const currentDate = JSON.stringify(date)
+            const id =  Math.random
+            const tf_id = JSON.stringify(id)
 
-        //declare callback function
-        function paymentCallback(response) {
-          if (response.resp === '10' || response.resp === "11"|| response.resp === "00")  {
-            Swal.fire({
-                title: "Success",
-                text: "Transaction was successfull",
-                icon: "success"
-            });
-          }
-            console.log(response);
-        }
-        const date = Date.now()
-        const currentDate = JSON.stringify(date)
-        const id =  Math.random
-        const tf_id = JSON.stringify(id)
+            //sample payment request
+            const samplePaymentRequest = {
+                merchant_code: "MX201383",          
+                pay_item_id: "Default_Payable_MX201383",
+                txn_ref: currentDate + "JT_txn_ref" + tf_id,
+                site_redirect_url: "https://julies-treat.vercel.app/order.html",
+                amount: price, 
+                currency: 949, // ISO 4217 numeric code of the currency used
+                cust_email: email,
+                cust_name: name,
+                // cust_mobile_no: "1234567890",
+                pay_item_name: snack,
+                onComplete: paymentCallback,
+                mode: 'TEST'
+            };
 
-        //sample payment request
-        const samplePaymentRequest = {
-            merchant_code: "MX201383",          
-            pay_item_id: "Default_Payable_MX201383",
-            txn_ref: currentDate + "JT_txn_ref" + tf_id,
-            site_redirect_url: "http://localhost:5500/order.html",
-            amount: price, 
-            currency: 949, // ISO 4217 numeric code of the currency used
-            cust_email: email,
-            cust_name: name,
-            // cust_mobile_no: "1234567890",
-            pay_item_name: snack,
-            onComplete: paymentCallback,
-            mode: 'TEST'
-        };
+            //call webpayCheckout to initiate the payment
+            window.webpayCheckout(samplePaymentRequest);
 
-        //call webpayCheckout to initiate the payment
-        window.webpayCheckout(samplePaymentRequest);
-
+          })
       })
     </script>
 </body>
