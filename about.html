@@ -1,302 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Julie's Treats - Snack Bar</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/logo.jpeg" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <script src="main.js"></script>
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Our Story | Julie's Treats</title>
+    <link rel="icon" href="img/logo.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pages.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>✦</span> Baked fresh every morning <span>✦</span> Delivery across
+      Nicosia <span>✦</span>
     </div>
-    <!-- Spinner End -->
-
-
-
-   <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-         <span style="width: 100%; display: flex; justify-content: space-between; align-items: center;" >
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <!-- <h1 class="text-primary m-0">Baker</h1> -->
-            <img alt="logo" src="img/logo.png" m-0 width= "30%" height="30%"  />
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        </span>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="menu.html" class="nav-item nav-link">Menu</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class=" d-none d-lg-flex">
-                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
-                    <i class="fa fa-phone text-primary"></i>
-                </div>
-            </div>
+    <header class="inner-header">
+      <a class="brand" href="index.html"
+        ><img src="img/logo.png" alt="Julie's Treats"
+      /></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="menu.html">Our menu</a
+        ><a class="active" href="about.html">Our story</a
+        ><a href="service.html">Services</a><a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-order" href="order.html"
+        >Order now <i class="fa-solid fa-arrow-right"></i></a
+      ><button class="menu-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <section class="page-hero reveal">
+      <div>
+        <p class="eyebrow">A little about us</p>
+        <h1>Our story</h1>
+        <p>Good food, warm memories, and a whole lot of love in every box.</p>
+      </div>
+    </section>
+    <main class="content-shell">
+      <section class="split-layout">
+        <div class="image-stack reveal">
+          <img src="img/chef1.jpeg" alt="Julie preparing treats" /><img
+            src="img/chef4.jpeg"
+            alt="Freshly prepared food"
+          />
         </div>
-    </nav>
-    <!-- Navbar End -->
-
-       <!-- Page Header Start -->
-    <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center pt-5 pb-3">
-            <h1 class="display-4 text-white animated slideInDown mb-3">About Us</h1>
+        <div class="copy reveal delay-1">
+          <p class="eyebrow">The Julie's difference</p>
+          <h2>We make every treat <em>with love.</em></h2>
+          <p>
+            Welcome to Julie's Treats, where every bite is a delightful
+            experience. We take pride in crafting mouthwatering snacks,
+            irresistible cakes, and delicious fast food using the freshest
+            ingredients.
+          </p>
+          <p>
+            What started with a love for sharing homemade goodness has grown
+            into a neighborhood kitchen built around quality, creativity, and the
+            joy of making someone's day a little sweeter.
+          </p>
+          <ul class="check-list">
+            <li>
+              <i class="fa-solid fa-check"></i>Fresh ingredients, every day
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Handcrafted in small batches
+            </li>
+            <li><i class="fa-solid fa-check"></i>Made for every occasion</li>
+          </ul>
+          <a class="button" href="menu.html"
+            >Explore our menu <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
-    </div>
-    <!-- Page Header End -->
-
-
-
-    <!-- About Start -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row img-twice position-relative h-100">
-                        <div class="col-6">
-                            <img class="img-fluid rounded" src="img/chef1.jpeg" alt="">
-                        </div>
-                        <div class="col-6 align-self-end">
-                            <img class="img-fluid rounded" src="img/chef4.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <p class="text-primary text-uppercase mb-2">// About Us</p>
-                        <h1 class="display-6 mb-4">We Make Every Treat with Love</h1>
-                        <p>Welcome to Julie's Treat, where every bite is a delightful experience! At Julie's Treat, we take pride in crafting mouthwatering snacks, irresistible cakes, and a variety of fast food that will tantalize your taste buds. Our passion for quality and our dedication to using the freshest ingredients ensure that each treat is as delicious as the last. Whether you're craving a sweet indulgence or a savory snack, we've got something for everyone. Join us on a culinary journey where flavor meets creativity, and every treat is made with love.</p>
-                         <div class="row g-2 mb-4">
-                                <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Sharwama
-                                </div>
-                                <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Cakes
-                                </div>
-                                <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Chicken
-                                </div>
-                                <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>And lots more...
-                                </div>
-                         </div>
-                         <a class="btn btn-primary rounded-pill py-3 px-5" href="product.html">Order Now 
-                            <i class="fa fa-bell fa-1x text-light"></i></a>
-                    </div>
-                </div>
-            </div>
+      </section>
+      <section class="stat-row reveal delay-2 mt-200 ">
+        <div class="stat"><strong>100%</strong><span>happy clients</span></div>
+        <div class="stat"><strong>30+</strong><span>tasty varieties</span></div>
+        <div class="stat"><strong>935</strong><span>orders served</span></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main section-shell">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Julie's Treats" />
+          <p>
+           Urban kitchen bringing you fresh dishes, pastries, and desserts
+            crafted daily with love and greatness.
+          </p>
         </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-6">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="text-primary text-uppercase mb-2">// Our Team</p>
-                <h1 class="display-6 mb-4">We're Super Professional At Our Skills</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item text-center rounded overflow-hidden">
-                        <img class="img-fluid" src="img/chef2.jpeg" alt="">
-                        <div class="team-text">
-                            <div class="team-title">
-                                <h5>Julie Dera</h5>
-                                <span>Chef</span>
-                            </div>
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light rounded-circle" href="https://www.facebook.com/julie.streats.2024"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light rounded-circle" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item text-center rounded overflow-hidden">
-                        <img class="img-fluid" src="img/chef3.jpeg" alt="">
-                        <div class="team-text">
-                            <div class="team-title">
-                                <h5>Julie Dera</h5>
-                                <span>Designation</span>
-                            </div>
-                            <div class="team-social">
-                                <a class="btn btn-square btn-light rounded-circle" href="https://www.facebook.com/julie.streats.2024"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light rounded-circle" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="index.html">Home</a><a href="menu.html">Menu</a
+          ><a href="order.html">Order online</a>
         </div>
-    </div> -->
-    <!-- Team End -->
-
-
-  <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <img alt="logo" src="img/logo.png" m-0 width="100%" height="100%" />
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Office Address</h4>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>Ragip Kenan Sokak OCP1 Apartmani Daire 4 taskinkoy lefkosa
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+90 548 857 00 14
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>julie.s.treat1@gmail.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr" target="_blank"><i class="fab fa-instagram-f fa-instagram"></i
-                  ></a>
-              <a
-                class="btn btn-square btn-outline-light rounded-circle me-1"
-                href="https://www.facebook.com/julie.streats.2024" target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <!-- <a
-                class="btn btn-square btn-outline-light rounded-circle me-1"
-                href=""
-                ><i class="fab fa-youtube"></i
-              ></a> -->
-             
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Quick Links</h4>
-            <a class="btn btn-link" href="/index.html">Home</a>
-            <a class="btn btn-link" href="/service.html">Services</a>
-            <a class="btn btn-link" href="/about.html">About</a>
-            <a class="btn btn-link" href="/contact.html">Contact</a>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Food Gallery</h4>
-            <div class="row g-2">
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/meatpie.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/puff-puff.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/chin-chin.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/prod2.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/samosa-roll.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/stickmeat2.jpeg"
-                  alt="Image"
-                />
-              </div>
-            </div>
-          </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="about.html">Our story</a><a href="service.html">Services</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Stay in touch</h4>
+          <p>Get fresh news and special offers.</p>
+          <a href="mailto:julie.s.treat1@gmail.com"
+            >julie.s.treat1@gmail.com <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
       </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="index.html">Julie's Treats</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    A World of <a href="index.html">Deliciousness</a>
-                </div>
-            </div>
+      <div class="footer-bottom section-shell">
+        <span>© <span></span> Julie's Treats. All rights reserved.</span>
+        <div>
+          <a href="https://www.instagram.com/julies_treatsofficial"
+            ><i class="fa-brands fa-instagram"></i></a
+          ><a href="https://www.facebook.com/julie.streats.2024"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
         </div>
-    </div>
-    <!-- Copyright End -->
-
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
+      </div>
+    </footer>
     <script src="js/main.js"></script>
-</body>
-
+    <script>
+        const currentYear = new Date().getFullYear();
+        const footerYearElement = document.querySelector('.footer-bottom span span');    
+        footerYearElement.textContent = currentYear;
+    </script>
+  </body>
 </html>

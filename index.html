@@ -1,723 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Julie's Treats - Snack Bar</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
-
-    <!-- Favicon -->
-    <link href="img/logo.jpeg" rel="icon" />
-
-    <!-- Google Web Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Julie's Treats — freshly baked goodness made with love and tradition."
+    />
+    <title>Julie's Treats | Freshly Baked Goodness</title>
+    <link rel="icon" href="img/logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins"
-      rel="stylesheet"
-    />
-
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    /> -->
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
   </head>
-
   <body>
-    <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <span
-        style="
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-          <img alt="logo" src="img/logo.png" m-0 width="20%" height="20%" />
-        </a>
-        <button
-          type="button"
-          class="navbar-toggler me-4"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </span>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav mx-auto p-4 p-lg-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="service.html" class="nav-item nav-link">Services</a>
-          <a href="menu.html" class="nav-item nav-link">Menu</a>
-          <a href="about.html" class="nav-item nav-link">About</a>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-        <div class="d-none d-lg-flex">
-          <div
-            class="flex-shrink-0 btn-lg-square border border-light rounded-circle"
-          >
-            <i class="fa fa-phone text-primary"></i>
-          </div>
-          <!-- <div class="ps-3">
-                    <small class="text-primary mb-0">Call Us</small>
-                    <p class="text-light fs-5 mb-0">+012 345 6789</p>
-                </div> -->
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/bg2.jpeg" alt="" />
-          <div class="owl-carousel-inner">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-lg-8">
-                  <p class="text-primary text-uppercase fw-bold mb-2">
-                    // The Best Snack Bar
-                  </p>
-                  <h1 class="display-1 text-light mb-4 animated slideInDown">
-                    We Serve With Passion
-                  </h1>
-                  <p class="text-light fs-5 mb-4 pb-3">
-                    Give Your taste buds a treat today
-                  </p>
-                  <a
-                    href="/menu.html"
-                    class="btn btn-primary rounded-pill py-3 px-5"
-                    >Order Now <i class="fa fa-bell fa-1x text-light"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/bg4.jpeg" alt="" />
-          <div class="owl-carousel-inner">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-lg-8">
-                  <p class="text-primary text-uppercase fw-bold mb-2">
-                    // The Best Snack Bar
-                  </p>
-                  <h1 class="display-1 text-light mb-4 animated slideInDown">
-                    We Bake With Passion
-                  </h1>
-                  <p class="text-light fs-5 mb-4 pb-3">
-                    Vero elitr justo clita lorem. Ipsum dolor sed stet sit diam
-                    rebum ipsum.
-                  </p>
-                  <a
-                    href="menu.html"
-                    class="btn btn-primary rounded-pill py-3 px-5"
-                    >Order Now <i class="fa fa-bell fa-1x text-light"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="announcement">
+      <span>✦</span> Baked fresh every morning <span>✦</span> Delivery across
+      Nicosia <span>✦</span>
     </div>
-    <!-- Carousel End -->
-
-    <!-- Facts Start -->
-    <div class="container-xxl py-6">
-      <div class="container">
-        <div class="row g-4">
-          <!-- <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="fact-item bg-light rounded text-center h-100 p-5">
-                        <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
-                        <p class="mb-2">Years Experience</p>
-                        <h1 class="display-5 mb-0" data-toggle="counter-up">50</h1>
-                    </div>
-                </div> -->
-          <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-            <div class="fact-item bg-light rounded text-center h-100 p-5">
-              <i class="fa fa-users fa-4x text-primary mb-4"></i>
-              <p class="mb-2">Satisfied Clients</p>
-              <span
-                ><h1 class="display-5 mb-0" data-toggle="counter-up">100</h1>
-                <h1 class="display-5 mb-0">%</h1></span
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Julie's Treats home"
+        ><img src="img/logo.png" alt="Julie's Treats"
+      /></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#top">Home</a><a href="menu.html">Our menu</a
+        ><a href="about.html">Our story</a><a href="service.html">Services</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-order" href="order.html"
+        >Order now <i class="fa-solid fa-arrow-right"></i
+      ></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Julie's Treats</p>
+          <h1>
+            Freshly baked goodness<br /><em>made with love</em><br />and
+            greatness.
+          </h1>
+          <p class="hero-text">
+            Handcrafted breads, pastries, and desserts prepared daily with
+            premium ingredients and time-honored baking & cooking techniques.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="order.html"
+              >Get it now <i class="fa-solid fa-arrow-right"></i></a
+            ><a class="text-link" href="menu.html"
+              >Explore the menu <i class="fa-solid fa-arrow-down"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="img/carousel-1.jpg"
+            alt="A selection of freshly baked breads"
+          />
+          <div class="hero-stamp">
+            <span>Since</span><strong>2024</strong
+            ><span>Fresh & delicious</span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#story" aria-label="Scroll to our story"
+          ><i class="fa-solid fa-arrow-down"></i
+        ></a>
+      </section>
+      <section class="story section-shell" id="story">
+        <div class="section-intro">
+          <p class="eyebrow">The Julie's difference</p>
+          <h2>Made fresh <em>every morning</em></h2>
+          <p>
+            From our lovely kitchen to your prestigious table, every bite is made with
+            care, using recipes and ingredients we believe in.
+          </p>
+        </div>
+        <div class="story-grid">
+          <article class="feature-card">
+            <div class="feature-image">
+              <img src="img/meatpie.jpeg" alt="Freshly baked meat pies" />
+            </div>
+            <div>
+              <span class="card-number">01</span>
+              <h3>Classic bread box</h3>
+              <p>Our much-loved selection of savory, flaky favorites.</p>
+              <a href="menu.html"
+                >Discover <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+          <article class="feature-card feature-card-dark">
+            <div class="feature-image">
+              <img src="img/prod2.jpeg" alt="Freshly prepared puff puff" />
+            </div>
+            <div>
+              <span class="card-number">02</span>
+              <h3>Artisan favorites</h3>
+              <p>Golden, warm, and made in small batches every day.</p>
+              <a href="menu.html"
+                >Discover <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-image">
+              <img src="img/chicken-pie.jpeg" alt="Fresh chicken pie" />
+            </div>
+            <div>
+              <span class="card-number">03</span>
+              <h3>Sweet treats</h3>
+              <p>A little something special for every celebration.</p>
+              <a href="menu.html"
+                >Discover <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="favorites section-shell" id="favorites">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Fresh from the oven</p>
+            <h2>Customer favorites</h2>
+            <p>
+              Discover the treats our customers come back for, day after day.
+            </p>
+          </div>
+          <div class="slider-buttons">
+            <button aria-label="Previous">
+              <i class="fa-solid fa-arrow-left"></i></button
+            ><button aria-label="Next" class="filled">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="favorite-grid">
+          <div class="favorite-track">
+          <article class="favorite-card">
+            <div class="favorite-photo">
+              <img src="img/puff-puff-lg.jpeg" alt="Puff puff" /><button
+                aria-label="Add puff puff to favorites"
               >
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.5s">
-            <div class="fact-item bg-light rounded text-center h-100 p-5">
-              <i class="fa fa-bread-slice fa-4x text-primary mb-4"></i>
-              <p class="mb-2">Varities</p>
-              <h1 class="display-5 mb-0" data-toggle="counter-up">30</h1>
+            <div class="favorite-meta">
+              <div>
+                <h3>Puff puff</h3>
+                <p>Soft & golden</p>
+              </div>
+              <strong>₺20.00</strong>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.7s">
-            <div class="fact-item bg-light rounded text-center h-100 p-5">
-              <i class="fa fa-cart-plus fa-4x text-primary mb-4"></i>
-              <p class="mb-2">Order Everyday</p>
-              <h1 class="display-5 mb-0" data-toggle="counter-up">935</h1>
+          </article>
+          <article class="favorite-card">
+            <div class="favorite-photo">
+              <img src="img/gizzard.jpg" alt="Gizzard" /><button
+                aria-label="Add sauced gizzard to favorites"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
+            <div class="favorite-meta">
+              <div>
+                <h3>Gizzard</h3>
+                <p>Delicious and tender</p>
+              </div>
+              <strong>₺70.00</strong>
+            </div>
+          </article>
+          <article class="favorite-card">
+            <div class="favorite-photo">
+              <img src="img/meatpie.jpg" alt="Meat pie" /><button
+                aria-label="Add meat pie to favorites"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="favorite-meta">
+              <div>
+                <h3>Meat pie</h3>
+                <p>Freshly baked</p>
+              </div>
+              <strong>₺50.00</strong>
+            </div>
+          </article>
+          <article class="favorite-card">
+            <div class="favorite-photo">
+              <img src="img/samosa.jpg" alt="Samosa" /><button
+                aria-label="Add samosa to favorites"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="favorite-meta">
+              <div>
+                <h3>Assorted pastries</h3>
+                <p>Perfectly flaky</p>
+              </div>
+              <strong>₺40.00</strong>
+            </div>
+          </article>
+          
           </div>
+        </div>
+      </section>
+      <section class="cta section-shell">
+        <div class="cta-content">
+          <p class="eyebrow">Taste the difference</p>
+          <h2>Baking every day<br /><em>just for you.</em></h2>
+          <p>Come by for something warm, delicious, and made with love.</p>
+          <a class="button button-light" href="order.html"
+            >Get it now <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <img src="img/carousel-2.jpg" alt="Bread fresh from the oven" />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main section-shell">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Julie's Treats" />
+          <p>
+           Urban kitchen bringing you fresh dishes, pastries, and desserts
+            crafted daily with love and greatness.
+          </p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="index.html">Home</a><a href="menu.html">Menu</a
+          ><a href="order.html">Order online</a>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="about.html">Our story</a><a href="service.html">Services</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Stay in touch</h4>
+          <p>Get fresh news and special offers.</p>
+          <a href="mailto:julie.s.treat1@gmail.com"
+            >julie.s.treat1@gmail.com <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
       </div>
-    </div>
-    <!-- Facts End -->
-
-    <!-- About Start -->
-    <div class="container-xxl py-6">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row img-twice position-relative h-100">
-              <div class="col-6">
-                <img class="img-fluid rounded" src="img/back-g.jpeg" alt="" />
-              </div>
-              <div class="col-6 align-self-end">
-                <img
-                  class="img-fluid rounded"
-                  src="img/chef6.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="h-100">
-              <p class="text-primary text-uppercase mb-2">// About Us</p>
-              <h1 class="display-6 mb-4">
-                We Make Every Treat with Love
-              </h1>
-              <p>
-               Welcome to Julie's Treat, where every bite is a delightful experience! At Julie's Treat, we take pride in crafting mouthwatering snacks, irresistible cakes, and a variety of fast food that will tantalize your taste buds. Our passion for quality and our dedication to using the freshest ingredients ensure that each treat is as delicious as the last. Whether you're craving a sweet indulgence or a savory snack, we've got something for everyone. Join us on a culinary journey where flavor meets creativity, and every treat is made with love.
-              </p>
-      
-              <div class="row g-2 mb-4">
-                <div class="col-sm-6">
-                  <i class="fa fa-check text-primary me-2"></i>Sharwama
-                </div>
-                <div class="col-sm-6">
-                  <i class="fa fa-check text-primary me-2"></i>Cakes
-                </div>
-                <div class="col-sm-6">
-                  <i class="fa fa-check text-primary me-2"></i>Chicken
-                </div>
-                <div class="col-sm-6">
-                  <i class="fa fa-check text-primary me-2"></i>And lots more...
-                </div>
-              </div>
-              <a
-                class="btn btn-primary rounded-pill py-3 px-5"
-                href="/menu.html"
-                >Order Now <i class="fa fa-bell fa-1x text-light"></i
-              ></a>
-            </div>
-          </div>
+      <div class="footer-bottom section-shell">
+        <span>© <span></span> Julie's Treats. All rights reserved.</span>
+        <div>
+          <a href="https://www.instagram.com/julies_treatsofficial"
+            ><i class="fa-brands fa-instagram"></i></a
+          ><a href="https://www.facebook.com/julie.streats.2024"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
         </div>
       </div>
-    </div>
-    <!-- About End -->
-
-   
-    
-
-    <!-- Product Start -->
-    <div class="container-xxl bg-light my-6 py-6 pt-0">
-      <div class="container">
-        <div class="bg-primary text-light rounded py-5 px-3 my-6 mt-0 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 col-md-12">
-              <h2 class="display-lg-8 display-md-2 text-light mb-0">
-                We Are The Best Snack Bar In Nicosia
-              </h2>
-            </div>
-            
-            <div class="col-lg-6  leftBorder py-1" >
-              <p class="m-0 p-0" >tap to call</p>
-              <div class="cursor-pointer flex flex-row justify-between items-center">
-                <i class="fa fa-phone-alt fa-2x flex-shrink-1 phoneIcon "></i>
-                <a href="tel: +905488570014" class=" fs-1 fw-semibold text-light ">+90 548 857 00 14</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px" >
-          <p class="text-primary text-uppercase mb-2">// Our Products</p>
-          <h1 class="display-6 mb-4">Explore Our Varities of Deliciousness</h1>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
-              <div class="text-center p-4">
-                <div class="d-inline-block border border-primary rounded-pill px-3 mb-3" >
-                  40TL - 50TL
-                </div>
-                <h3 class="mb-3">Meat/Chicken Pie</h3>
-                <span >Enjoy our special Meat and Chicken Pie packs</span>
-              </div>
-              <div class="position-relative mt-auto">
-                <img
-                  class="img-fluid"
-                  src="img/meatpie.jpeg"
-                  height="50%"
-                  alt=""
-                />
-                <div class="product-overlay">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle"
-                    href="/menu.html"
-                    ><i class="fa fa-eye text-primary"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
-              <div class="text-center p-4">
-                <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" >
-                  10TL - 20TL
-                </div>
-                <h4 class="mb-3">Puff Puff</h4>
-                <span >Have a great treat with our golden brown Puff Puff.</span>
-              </div>
-              <div class="position-relative mt-auto">
-                <img
-                  class="img-fluid"
-                  src="img/prod3.jpeg"
-                  height="20px"
-                  alt=""
-                />
-                <div class="product-overlay">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle"
-                    href="/menu.html"
-                    ><i class="fa fa-eye text-primary"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="product-item d-flex flex-column border border-primary bg-white rounded h-auto">
-              <div class="text-center p-4">
-                <div
-                  class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3"
-                >
-              
-                  150TL - 180TL
-                </div>
-                <h3 class="mb-3">Sharwama</h3>
-                <span
-                  >Enjoy a perfect varity of Beef Sharwama, Chicken Sharwama and a blend of both worlds. </span
-                >
-              </div>
-              <div class="position-relative mt-auto rounded-b">
-                <div class="rounded-b">
-                  <img
-                    class="img-fluid rounded-b"
-                    src="img/sharwama1.jpg"
-                    height="50%"
-                    alt=""
-                  />
-                </div>
-
-                <div class="product-overlay rounded-b">
-                  <a
-                    class="btn btn-lg-square btn-outline-light rounded-circle"
-                    href="/menu.html"
-                    ><i class="fa fa-eye text-primary"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- Product End -->
-
-    <!-- Service Start -->
-    <div class="container-xxl py-6">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <p class="text-primary text-uppercase mb-2">// Our Services</p>
-            <h1 class="display-6 mb-4">What Do We Offer?</h1>
-            <p class="mb-5">
-              At Julie's Treat, we believe in providing not just products but memorable experiences. Here’s what we offer:
-            </p>
-            <div class="row gy-5 gx-4">
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center mb-3">
-                  <div
-                    class="flex-shrink-0 btn-square bg-primary rounded-circle me-3"
-                  >
-                    <i class="fa fa-bread-slice text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Quality Products</h5>
-                </div>
-                <span>We use only the finest ingredients to create our delicious treats. From our freshly baked cakes to our savory snacks, quality is at the heart of everything we do.</span
-                >
-              </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                <div class="d-flex align-items-center mb-3">
-                  <div
-                    class="flex-shrink-0 btn-square bg-primary rounded-circle me-3"
-                  >
-                    <i class="fa fa-birthday-cake text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Custom Products</h5>
-                </div>
-                <span>Want something unique? We offer customized products to match your preferences. Whether it's a special cake for a celebration or a snack platter for a gathering, we cater to your needs.</span
-                >
-              </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="d-flex align-items-center mb-3">
-                  <div
-                    class="flex-shrink-0 btn-square bg-primary rounded-circle me-3"
-                  >
-                    <i class="fa fa-cart-plus text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Online Ordering</h5>
-                </div>
-                <span> Convenience is key! You can easily place your order online, choosing from our wide range of products, and we'll have it ready for you in no time.</span>
-              </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                <div class="d-flex align-items-center mb-3">
-                  <div
-                    class="flex-shrink-0 btn-square bg-primary rounded-circle me-3"
-                  >
-                    <i class="fa fa-truck text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Home Delivery</h5>
-                </div>
-                <span>Enjoy our treats from the comfort of your home. We offer fast and reliable home delivery so that you can indulge in our delicious offerings without stepping out.</span>
-              </div>
-            </div>
-            <p class="mt-5">
-              At Julie's Treat, we're committed to making every moment a little sweeter and every occasion a bit more special.
-            </p>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row img-twice position-relative h-100">
-              <div class="col-6">
-                <img class="img-fluid rounded" src="img/service-1.jpg" alt="" />
-              </div>
-              <div class="col-6 align-self-end">
-                <img
-                  class="img-fluid rounded"
-                  src="img/samosa-roll.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Service End -->
-
-    <!-- Team Start -->
-    <div class="container-lg py-6">
-      <div class="container">
-        <div
-          class="text-center mx-auto mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 500px"
-        >
-          <p class="text-primary text-uppercase mb-2">// Our Team</p>
-          <h1 class="display-6 mb-4">Meet the Chef</h1>
-        </div>
-       
-        <div class="row g-4">
-           
-          <div class="gallery">
-            <img src="img/img7.jpeg" alt="Image 6" />
-            <img src="img/chef2.jpeg" alt="Image 2" />
-            <img src="img/img5.jpeg" alt="Image 3" />
-            <img src="img/chef3.jpeg" alt="Image 5" />
-            <img src="img/img4.jpeg" alt="Image 4" />
-            <img src="img/chef1.jpeg" alt="Image 6" />
-          </div> 
-          <div class="col-lg-12 col-md-6 wow">
-            <div class="team-item text-center rounded">
-              <div class="team-text">
-                <div class="team-social">
-                  <a class="btn btn-square btn-light rounded-circle" href="https://www.facebook.com/julie.streats.2024" target="_blank"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square btn-light rounded-circle" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr" target="_blank"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl bg-light my-6 py-6 ">
-      <div class="container ">
-        <div
-          class="text-center mx-auto mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 500px"
-        >
-          <p class="text-primary text-uppercase mb-2">// Client's Review</p>
-          <h1 class="display-6 mb-4">Hear from our happy Clients</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          <div class="testimonial-item bg-white rounded p-4">
-            <div class="d-flex align-items-center mb-4">
-              <img
-                class="flex-shrink-0 rounded-circle border p-1"
-                src="img/testimonial-1.jpg"
-                alt=""
-              />
-              <div class="ms-4">
-                <h5 class="mb-1"> Rebecca M.</h5>
-                <span>Student</span>
-              </div>
-            </div>
-            <i class="mb-0">
-              "Julie's Treat is my go-to place for delicious snacks! The cakes are always fresh, and the flavors are out of this world. My family loves their custom cakes for special occasions—it's like they know exactly what we want! I highly recommend them to anyone looking for quality and taste."
-            </i>
-          </div>
-          <div class="testimonial-item bg-white rounded p-4">
-            <div class="d-flex align-items-center mb-4">
-              <img
-                class="flex-shrink-0 rounded-circle border p-1"
-                src="img/testimonial-2.jpg"
-                alt=""
-              />
-              <div class="ms-4">
-                <h5 class="mb-1">James Kelvin</h5>
-                <span>Photographer</span>
-              </div>
-            </div>
-            <i class="mb-0">
-             
-              "I was blown away by the quality and variety of treats at Julie's Treat. The online ordering process is so easy, and the delivery is always on time. Their savory snacks are a hit at every party I host. Plus, the customer service is top-notch!"
-            </i>
-          </div>
-          <div class="testimonial-item bg-white rounded p-4">
-            <div class="d-flex align-items-center mb-4">
-              <img
-                class="flex-shrink-0 rounded-circle border p-1"
-                src="img/testimonial-3.jpg"
-                alt=""
-              />
-              <div class="ms-4">
-                <h5 class="mb-1">Michael Owen</h5>
-                <span>Contractor</span>
-              </div>
-            </div>
-            <i class="mb-0">
-              "The first time I tried Julie's Treat, I knew I had found something special. Their snacks are perfect for satisfying my cravings, and the custom cakes are simply stunning. I ordered a cake for my daughter's birthday, and it was not only beautiful but absolutely delicious!"
-            </i>
-          </div>
-          <div class="testimonial-item bg-white rounded p-4">
-            <div class="d-flex align-items-center mb-4">
-              <img
-                class="flex-shrink-0 rounded-circle border p-1"
-                src="img/testimonial-4.jpg"
-                alt=""
-              />
-              <div class="ms-4">
-                <h5 class="mb-1">Sarah L.</h5>
-                <span>Stylist</span>
-              </div>
-            </div>
-            <i class="mb-0">
-              "Julie's Treat never disappoints! I love the convenience of ordering online and having my favorite snacks delivered right to my door. The quality is always consistent, and their products are worth every penny. The personalized touch in everything they do makes me a loyal customer."
-            </i>
-          </div>
-        </div>
-        <!-- <div class="bg-primary text-light rounded-top p-5 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="display-6 text-light mb-0">Client's Review</h2>
-                        <p class="text-light mb-0">Leave a comment</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="position-relative">
-                            <input class="form-control bg-transparent border-light text-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Comments">
-                            <button type="button" class="btn btn-dark py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SEND <i class="fa fa-paper-plane me-3"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-      </div>
-    </div>
-    <!-- Testimonial End -->
-
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <img alt="logo" src="img/logo.png" m-0 width="100%" height="100%" />
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Office Address</h4>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>Ragip Kenan Sokak OCP1 Apartmani Daire 4 taskinkoy lefkosa
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>+90 548 857 00 14
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>julie.s.treat1@gmail.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/julies_treatsofficial?igsh=eTZwMHJ0bmZwZDRr" target="_blank"><i class="fab fa-instagram-f fa-instagram"></i
-                  ></a>
-              <a
-                class="btn btn-square btn-outline-light rounded-circle me-1"
-                href="https://www.facebook.com/julie.streats.2024" target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <!-- <a
-                class="btn btn-square btn-outline-light rounded-circle me-1"
-                href=""
-                ><i class="fab fa-youtube"></i
-              ></a> -->
-             
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Quick Links</h4>
-            <a class="btn btn-link" href="/index.html">Home</a>
-            <a class="btn btn-link" href="/service.html">Services</a>
-            <a class="btn btn-link" href="/about.html">About</a>
-            <a class="btn btn-link" href="/contact.html">Contact</a>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Food Gallery</h4>
-            <div class="row g-2">
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/meatpie.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/puff-puff.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/chin-chin.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/prod2.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/samosa-roll.jpeg"
-                  alt="Image"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  class="img-fluid bg-light rounded p-1"
-                  src="img/stickmeat2.jpeg"
-                  alt="Image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Copyright Start -->
-    <div
-      class="container-fluid copyright text-light py-4 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            &copy; <a href="#">Julie's Treats</a>, All Right Reserved.
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            A World of <a href="#">Deliciousness</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Copyright End -->
-
-    <!-- Back to Top -->
-    <a
-      href="#"
-      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        const footerYearElement = document.querySelector('.footer-bottom span span');    
+        footerYearElement.textContent = currentYear;
+    </script>
   </body>
 </html>

@@ -1,0 +1,452 @@
+.inner-header {
+  width: min(1160px, calc(100% - 72px));
+  margin: 0 auto;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner-header .brand {
+  width: 104px;
+}
+.inner-header .main-nav {
+  margin-left: auto;
+  margin-right: 42px;
+}
+.page-hero {
+  width: min(1160px, calc(100% - 72px));
+  margin: 18px auto 0;
+  min-height: 300px;
+  border-radius: 20px;
+  background:
+    linear-gradient(90deg, rgba(53, 16, 14, 0.95), rgba(53, 16, 14, 0.32)),
+    url("../img/carousel-2.jpg") center/cover;
+  display: flex;
+  align-items: end;
+  padding: 48px 70px;
+  color: #fff8eb;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero:after {
+  content: "✦  FRESH & DELICIOUS  ✦";
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  color: #d5aa67;
+  font: 10px "DM Sans";
+  letter-spacing: 0.15em;
+  transform: rotate(90deg);
+}
+.page-hero h1 {
+  font:
+    600 clamp(42px, 6vw, 72px)/1 "Playfair Display",
+    serif;
+  margin: 0;
+}
+.page-hero p {
+  color: #d5c2ae;
+  margin: 15px 0 0;
+  max-width: 430px;
+}
+.content-shell {
+  width: min(1060px, calc(100% - 72px));
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+  align-items: center;
+}
+.image-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: end;
+}
+.image-stack img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.image-stack img:last-child {
+  height: 280px;
+}
+.copy h2,
+.section-title {
+  font:
+    600 clamp(35px, 4vw, 53px)/1.08 "Playfair Display",
+    serif;
+  margin: 0 0 20px;
+  letter-spacing: -0.03em;
+}
+.copy h2 em,
+.section-title em {
+  color: #b4864e;
+}
+.copy > p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 32px;
+  display: grid;
+  gap: 12px;
+}
+.check-list li {
+  font-size: 13px;
+}
+.check-list i {
+  color: #b4864e;
+  margin-right: 10px;
+}
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 0 0 90px;
+}
+.stat {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+.stat strong {
+  display: block;
+  color: var(--wine);
+  font:
+    600 35px "Playfair Display",
+    serif;
+}
+.stat span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+.service-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  transition: 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 35px rgba(53, 16, 14, 0.1);
+}
+.service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--wine);
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.service-card h3 {
+  font:
+    600 23px "Playfair Display",
+    serif;
+  margin: 0 0 8px;
+}
+.service-card p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+}
+.menu-intro {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 45px;
+}
+.menu-intro p:not(.eyebrow) {
+  color: var(--muted);
+}
+.menu-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.filter-button {
+  background: transparent;
+  color: var(--wine);
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  padding: 10px 18px;
+  font: 600 10px "DM Sans";
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.filter-button.active,
+.filter-button:hover {
+  background: var(--wine);
+  color: #fff8eb;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.menu-card {
+  background: var(--paper);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: 0.3s;
+}
+.menu-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 30px rgba(53, 16, 14, 0.12);
+}
+.menu-photo {
+  height: 190px;
+  position: relative;
+}
+.menu-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.menu-photo button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff8eb;
+  color: var(--wine);
+  cursor: pointer;
+}
+.menu-info {
+  padding: 18px;
+}
+.menu-info h3 {
+  font:
+    600 20px "Playfair Display",
+    serif;
+  margin: 0 0 5px;
+}
+.menu-info p {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 0;
+}
+.menu-info strong {
+  display: block;
+  color: var(--wine);
+  margin-top: 12px;
+  font-size: 14px;
+}
+.order-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 18px 40px rgba(53, 16, 14, 0.08);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.field.full {
+  grid-column: 1/-1;
+}
+.field label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fffdf7;
+  padding: 13px;
+  font: 13px "DM Sans";
+  color: var(--ink);
+  outline: 0;
+}
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(213, 170, 103, 0.15);
+}
+.order-summary {
+  background: #f5ead7;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 25px;
+}
+.contact-info {
+  background: var(--wine);
+  color: #fff8eb;
+  border-radius: 18px;
+  padding: 35px;
+}
+.contact-info h2 {
+  font:
+    600 36px "Playfair Display",
+    serif;
+  margin: 0 0 14px;
+}
+.contact-info > p {
+  color: #d5c2ae;
+  font-size: 12px;
+}
+.contact-detail {
+  display: flex;
+  gap: 13px;
+  margin-top: 27px;
+  color: #f2dba7;
+  font-size: 12px;
+}
+.contact-detail i {
+  color: var(--gold);
+  margin-top: 3px;
+}
+.contact-form {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 35px;
+}
+.contact-form .form-grid .field.full:last-child {
+  text-align: center;
+}
+.map-frame {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 18px;
+  margin-top: 25px;
+  filter: sepia(0.25);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: rise-in 0.8s ease forwards;
+}
+.delay-1 {
+  animation-delay: 0.12s;
+}
+.delay-2 {
+  animation-delay: 0.24s;
+}
+.delay-3 {
+  animation-delay: 0.36s;
+}
+@keyframes rise-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 800px) {
+  .inner-header,
+  .page-hero,
+  .content-shell {
+    width: calc(100% - 34px);
+  }
+  .inner-header {
+    height: 65px;
+  }
+  .inner-header .main-nav,
+  .inner-header .header-order {
+    display: none;
+  }
+  .page-hero {
+    min-height: 260px;
+    padding: 35px 28px;
+  }
+  .page-hero:after {
+    display: none;
+  }
+  .content-shell {
+    padding: 68px 0;
+  }
+  .split-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .image-stack img {
+    height: 300px;
+  }
+  .image-stack img:last-child {
+    height: 220px;
+  }
+  .stat-row {
+    margin-bottom: 60px;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .menu-photo {
+    height: 165px;
+  }
+  .menu-info {
+    padding: 14px;
+  }
+  .order-card,
+  .contact-form,
+  .contact-info {
+    padding: 26px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .field.full {
+    grid-column: auto;
+  }
+  .menu-filter {
+    flex-wrap: wrap;
+  }
+}
