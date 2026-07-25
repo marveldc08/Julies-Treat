@@ -193,7 +193,7 @@ async function createPaymentIntent(request, response) {
       mode: interswitch.mode,
       checkoutUrl:
         interswitch.mode === "LIVE"
-          ? "https://webpay.interswitchng.com/collections/w/pay"
+          ? "https://newwebpay.interswitchng.com/collections/w/pay"
           : "https://sandbox.interswitchng.com/collections/w/pay",
     });
   } catch (error) {
