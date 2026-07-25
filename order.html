@@ -91,6 +91,8 @@
               name="quantity"
               type="number"
               min="1"
+              max="100"
+              step="1"
               value="1"
               required
             />
@@ -123,10 +125,14 @@
                 font-size: 10px;
                 margin-top: 4px;
               "
-              >USD conversion calculated at payment</small
+              >Payment currency calculated at checkout</small
             >
           </div>
         </div>
+        <p class="payment-currency-note" id="paymentCurrencyNote">
+          Prices are displayed in Turkish lira (TRY). The payment currency is
+          shown before checkout; your bank may apply its own exchange rate or fees.
+        </p>
         <button class="button" type="submit">
           Place my order <i class="fa-solid fa-arrow-right"></i>
         </button>
@@ -171,7 +177,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://newwebpay.qa.interswitchng.com/inline-checkout.js"></script>
     <script src="js/main.js"></script>
     <script>
       const currentYear = new Date().getFullYear();

@@ -316,6 +316,12 @@
   justify-content: space-between;
   font-size: 12px;
 }
+.payment-currency-note {
+  margin: -8px 0 22px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
 .contact-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;

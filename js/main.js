@@ -124,34 +124,110 @@ const quantity = document.querySelector("#quantity");
 const delivery = document.querySelector("#delivery");
 const orderTotal = document.querySelector("#orderTotal");
 const paymentEstimate = document.querySelector("#paymentEstimate");
-const PAYMENT_CURRENCY = 840; // USD, supported by the Interswitch account.
-const RATE_ENDPOINT = "https://open.er-api.com/v6/latest/TRY";
-let tryToUsdRate = null;
+
+function formatTry(amount) {
+  return new Intl.NumberFormat("tr-TR", {
+    style: "currency",
+    currency: "TRY",
+  }).format(amount);
+}
+
+function formatSettlementAmount(amount, currencyCode) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: currencyCode,
+  }).format(amount);
+}
+
+function getOrderTotalInTry() {
+  const priceInLira = Number(snackChoice?.value.split("|")[1]);
+  const itemQuantity = Math.max(1, Math.min(100, Number(quantity?.value) || 1));
+  const deliveryFee = delivery?.value === "delivery" ? 20 : 0;
+  const totalInLira = priceInLira * itemQuantity + deliveryFee;
+
+  if (!Number.isFinite(totalInLira) || totalInLira <= 0) {
+    throw new Error("Invalid order total");
+  }
+
+  return totalInLira;
+}
 
 function updateOrderTotal() {
   if (!snackChoice || !quantity || !delivery || !orderTotal) return;
-  const price = Number(snackChoice.value.split("|")[1]);
-  const total =
-    price * Math.max(1, Number(quantity.value) || 1) +
-    (delivery.value === "delivery" ? 20 : 0);
-  orderTotal.textContent = `₺${total.toFixed(2)}`;
-  if (paymentEstimate && tryToUsdRate) {
-    paymentEstimate.textContent = `≈ $${(total * tryToUsdRate).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} at payment`;
+  let total;
+  try {
+    total = getOrderTotalInTry();
+  } catch {
+    orderTotal.textContent = "—";
+    return;
   }
+
+  orderTotal.textContent = formatTry(total);
+  if (paymentEstimate) paymentEstimate.textContent = "Payment currency calculated securely at checkout";
 }
 
-async function getTryToUsdRate() {
-  if (tryToUsdRate) return tryToUsdRate;
-  const response = await fetch(RATE_ENDPOINT, {
+async function createPaymentIntent() {
+  const response = await fetch("/api/payment-intents", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify({
+      snack: snackChoice.value.split("|")[0],
+      quantity: Number(quantity.value),
+      fulfilment: delivery.value,
+      customerName: document.querySelector("#customerName")?.value,
+      customerEmail: document.querySelector("#customerEmail")?.value,
+      address: document.querySelector("#address")?.value,
+    }),
+  });
+  const data = await readPaymentResponse(response);
+  if (!response.ok) throw new Error(data.error || "Unable to create payment");
+  return data;
+}
+
+async function verifyPayment(reference) {
+  const response = await fetch(`/api/payments/${encodeURIComponent(reference)}/verify`, {
+    method: "POST",
     headers: { Accept: "application/json" },
   });
-  if (!response.ok) throw new Error("Exchange rate unavailable");
-  const data = await response.json();
-  const rate = Number(data?.rates?.USD);
-  if (!Number.isFinite(rate) || rate <= 0)
-    throw new Error("Invalid exchange rate");
-  tryToUsdRate = rate;
-  return rate;
+  const data = await readPaymentResponse(response);
+  if (!response.ok) throw new Error(data.error || "Unable to verify payment");
+  return data.verified === true;
+}
+
+function startRedirectCheckout(payment) {
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = payment.checkoutUrl;
+  const fields = {
+    merchant_code: payment.merchantCode,
+    pay_item_id: payment.payItemId,
+    txn_ref: payment.reference,
+    amount: payment.amountMinor,
+    currency: payment.currency,
+    cust_email: document.querySelector("#customerEmail")?.value.trim(),
+    cust_name: document.querySelector("#customerName")?.value.trim(),
+    site_redirect_url: `${window.location.origin}/payment-return`,
+  };
+  Object.entries(fields).forEach(([name, value]) => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = String(value || "");
+    form.appendChild(input);
+  });
+  document.body.appendChild(form);
+  form.submit();
+}
+
+async function readPaymentResponse(response) {
+  const body = await response.text();
+  try {
+    return JSON.parse(body);
+  } catch {
+    throw new Error(
+      `The payment server returned ${response.status} ${response.statusText || "an invalid response"}. Open this site with npm start, not VS Code Live Server.`,
+    );
+  }
 }
 
 const orderParams = new URLSearchParams(window.location.search);
@@ -161,10 +237,27 @@ if (snackChoice && orderParams.has("snack")) {
   );
   if (selected) snackChoice.value = selected.value;
 }
-[snackChoice, quantity, delivery].forEach((field) =>
-  field?.addEventListener("input", updateOrderTotal),
-);
+[snackChoice, quantity, delivery].forEach((field) => {
+  field?.addEventListener("input", updateOrderTotal);
+  field?.addEventListener("change", updateOrderTotal);
+});
 updateOrderTotal();
+
+const returnedPaymentReference = new URLSearchParams(window.location.search).get("payment_ref");
+if (returnedPaymentReference) {
+  const orderMessage = document.querySelector("#orderMessage");
+  orderMessage.textContent = "Verifying your payment securely…";
+  verifyPayment(returnedPaymentReference)
+    .then((verified) => {
+      orderMessage.textContent = verified
+        ? "Payment verified. Your order has been received."
+        : "Your payment is still being confirmed. Please do not pay again.";
+    })
+    .catch(() => {
+      orderMessage.textContent = "Your payment is still being confirmed. Please do not pay again.";
+    })
+    .finally(() => window.history.replaceState({}, "", "order.html"));
+}
 
 orderForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -172,55 +265,28 @@ orderForm?.addEventListener("submit", async (event) => {
   const submitButton = orderForm.querySelector('button[type="submit"]');
   const customerEmail = document.querySelector("#customerEmail")?.value.trim();
   const customerName = document.querySelector("#customerName")?.value.trim();
-  const priceInLira = Number(snackChoice.value.split("|")[1]);
-  const itemQuantity = Math.max(1, Number(quantity.value) || 1);
-  const deliveryFee = delivery.value === "delivery" ? 20 : 0;
-  const totalInLira = priceInLira * itemQuantity + deliveryFee;
-
-  if (typeof window.webpayCheckout !== "function") {
-    orderMessage.textContent =
-      "Payment service is unavailable. Please try again shortly.";
+  try {
+    getOrderTotalInTry();
+  } catch {
+    orderMessage.textContent = "Please review your order and try again.";
     return;
   }
 
   submitButton.disabled = true;
   orderMessage.textContent =
-    "Converting TRY to USD and opening secure payment…";
+    "Calculating your secure payment…";
 
   try {
-    const exchangeRate = await getTryToUsdRate();
-    const totalInUsd = totalInLira * exchangeRate;
+    const payment = await createPaymentIntent();
     if (paymentEstimate)
-      paymentEstimate.textContent = `≈ $${totalInUsd.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} at payment`;
-    window.webpayCheckout({
-      merchant_code: "MX201383",
-      pay_item_id: "Default_Payable_MX201383",
-      txn_ref: `julies_${Date.now()}`,
-      amount: Math.round(totalInUsd * 100), // USD is submitted in cents.
-      currency: PAYMENT_CURRENCY,
-      cust_email: customerEmail,
-      cust_name: customerName,
-      site_redirect_url: window.location.href,
-      mode: "TEST",
-      onComplete(response) {
-        if (response?.resp === "00") {
-          orderMessage.textContent =
-            "Payment completed successfully. Your order has been received.";
-          orderForm.reset();
-          updateOrderTotal();
-        } else {
-          orderMessage.textContent =
-            "Payment was not completed. You can try again.";
-        }
-        submitButton.disabled = false;
-      },
-    });
+      paymentEstimate.textContent = `Estimated charge: ${formatSettlementAmount(payment.displayAmount, payment.currencyCode)}`;
+    const paymentCurrencyNote = document.querySelector("#paymentCurrencyNote");
+    if (paymentCurrencyNote)
+      paymentCurrencyNote.textContent =
+        `Prices are displayed in Turkish lira (TRY). Your card will be charged in ${payment.currencyCode}. Your bank may apply its own exchange rate or fees.`;
+    startRedirectCheckout(payment);
   } catch (error) {
-    orderMessage.textContent =
-      error.message === "Exchange rate unavailable" ||
-      error.message === "Invalid exchange rate"
-        ? "We could not get the current TRY to USD exchange rate. Please try again."
-        : "Unable to open payment. Please try again.";
+    orderMessage.textContent = error.message || "Unable to open payment. Please try again.";
     submitButton.disabled = false;
   }
 });
